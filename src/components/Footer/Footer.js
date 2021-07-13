@@ -7,8 +7,11 @@ export const Footer = () => {
     return (
         <footer>
             <div className="container">
-                <p className="center">
-                    <i className="hecho">Copyright © {date} Hecho por</i> <i><b className="dueno">Hugo Eduardo Carvajalino Solano</b></i>
+                <p className="hecho">
+                    Copyright © {date} Hecho por &nbsp;
+                </p>
+                <p className="dueno">
+                    Hugo Eduardo Carvajalino Solano
                 </p>
             </div>
         </footer>
