@@ -1,0 +1,16 @@
+@import './settings';
+
+* {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0px;
+    background-color: $color-primario;
+    color: $color-texto;
+}
+
+.separacion {
+    margin-top: 10px;
+}
+
+.title {
+    color: $color-titulos;
+}
