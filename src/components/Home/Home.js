@@ -14,7 +14,7 @@ export const Home = () => {
             <section>
                 <Header />
             </section>
-            <section className="separacion">
+            <section id="informacion" className="separacion section scrollspy">
                 <Information />
             </section>
             <section className="separacion">
