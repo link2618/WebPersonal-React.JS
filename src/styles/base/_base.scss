@@ -1,8 +1,14 @@
 @import './settings';
 
 * {
-    font-family: Helvetica, Arial, sans-serif;
+    // font-family: Helvetica, Arial, sans-serif;
     margin: 0px;
+    // background-color: $color-primario;
+    // color: $color-texto;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
     background-color: $color-primario;
     color: $color-texto;
 }
@@ -13,4 +19,12 @@
 
 .title {
     color: $color-titulos;
+}
+
+.row {
+    background-color: transparent;
+}
+
+.card {
+    background-color: $color-primario;
 }

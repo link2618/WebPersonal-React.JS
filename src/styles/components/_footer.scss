@@ -1,15 +1,21 @@
-.container {
-    display: flex;
-    justify-content: center;
-}
 
-.hecho {
-    color: $color-texto;
-    font-style: italic;
-}
-
-.dueno {
-    color: $color-boton;
-    font-style: italic;
-    font-weight: 800;
+footer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    .container {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .hecho {
+        color: $color-texto;
+        font-style: italic;
+    }
+    
+    .dueno {
+        color: $color-boton;
+        font-style: italic;
+        font-weight: 800;
+    }
 }

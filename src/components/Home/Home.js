@@ -11,7 +11,7 @@ import { Skill } from '../Skill/Skill'
 export const Home = () => {
     return (
         <>
-            <section id="inicio" className="section scrollspy">
+            <section id="inicio">
                 <Header />
             </section>
             <section id="informacion" className="separacion section scrollspy">
