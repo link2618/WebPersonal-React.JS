@@ -1,0 +1,152 @@
+
+.timeline {
+    position: relative;
+    text-align: center;
+    
+    .timeline-event {
+        position: relative;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        .timeline-content {
+            position: relative;
+            width: calc(100% - 70px); // mob
+        }
+        // Linea antes del circulo
+        &::before {
+            content: "";
+            width: 5px;
+            height: calc(50% - 30px);
+            position: absolute;
+            background: $color-boton;
+            left: 22px; // mob
+            top: 0;
+        }
+        // Linea despues del circulo
+        &::after {
+            content: "";
+            width: 5px;
+            height: calc(50% - 30px);
+            position: absolute;
+            background: $color-boton;
+            left: 22px; // mob
+            top: calc(50% + 30px);
+        }
+
+        &:first-child::before, &:last-child::after {
+            display: none;
+        }
+
+        // par
+        &:nth-child(even) .timeline-content {
+            margin-left: 70px; // mob
+        }
+        // impar
+        &:nth-child(odd) .timeline-content {
+            margin-left: 70px; // mob
+        }
+        
+        .card {
+            background-color: $color-primario;
+        }
+        .card-content {
+            // color: $color-texto;
+            .card-title {
+                color: $color-titulos;
+            }
+
+            .date {
+                font-size: 2;
+            }
+        }
+        // blockquote {
+        // }
+        &:nth-child(odd) blockquote, &:nth-child(even) blockquote {
+            border-left: 6px solid $color-boton;
+            &::before {
+                content: "";
+                position: absolute;
+                top: calc(50% - 12px);
+                left: -20px;
+                width: 0;
+                height: 0;
+                border-width: 10px;
+                border-style: solid;
+                border-color:  transparent $color-boton transparent transparent;
+            }
+        }
+    }
+    .timeline-badge {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: $color-boton;
+        color: $color-primario;
+        top: calc(50% - 25px);
+        border-radius: 50%;
+        cursor: default;
+
+        left: 0; // mob
+        right: auto; // mob
+        h6 {
+            font-weight: bold;
+            font-size: 27px;
+            line-height: 25px;
+            // color: $color-titulos;
+        }
+    }
+}
+
+@media (min-width: 62rem) {
+    .timeline {
+        text-align: left;
+        .timeline-event {
+            .timeline-content {
+                width: calc(50% - 50px);
+            }
+            // Linea antes del circulo
+            &::before {
+                left: calc(50% - 3px); //centrar linea escritorio
+            }
+            // Linea despues del circulo
+            &::after {
+                left: calc(50% - 3px);
+            }
+    
+            &:first-child::before, &:last-child::after {
+                display: none;
+            }
+    
+            // par
+            &:nth-child(even) .timeline-content {
+                margin-left: calc(50% + 50px);
+            }
+            // impar
+            &:nth-child(odd) .timeline-content {
+                margin-left: 0;
+            }
+            &:nth-child(odd) blockquote {
+                border-left-width: 0;
+                border-right: 6px solid $color-boton;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: calc(50% - 12px);
+                    left: auto;
+                    right: -20px;
+                    width: 0;
+                    height: 0;
+                    border-width: 10px;
+                    border-style: solid;
+                    border-color:  transparent transparent transparent $color-boton;
+                }
+            }
+        }
+        .timeline-badge {
+            left: auto;
+            right: calc(50% - 25px);
+        }
+    }
+}
