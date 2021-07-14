@@ -1,9 +1,10 @@
 import React from 'react'
+import { Title } from '../Title/Title'
 
 export const Education = () => {
     return (
         <>
-            <h1 className='title'>Titulo</h1>
+            <Title texto={'Educación'} icono={'flaticon/png/001-curriculum.png'} autor={'Icono realizado por Freepik de www.flaticon.com'} />
             Educación
         </>
     )

@@ -17,7 +17,7 @@ export const Home = () => {
             <section id="informacion" className="separacion section scrollspy">
                 <Information />
             </section>
-            <section className="separacion">
+            <section id="educacion" className="separacion scrollspy">
                 <Education />
             </section>
             <section className="separacion">
