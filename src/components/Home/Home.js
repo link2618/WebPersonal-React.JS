@@ -20,10 +20,10 @@ export const Home = () => {
             <section id="educacion" className="separacion scrollspy">
                 <Education />
             </section>
-            <section className="separacion">
+            <section id="habilidades" className="separacion scrollspy">
                 <Skill />
             </section>
-            <section className="separacion">
+            <section id="pasatiempos" className="separacion scrollspy">
                 <Hobbies />
             </section>
             <section className="separacion">

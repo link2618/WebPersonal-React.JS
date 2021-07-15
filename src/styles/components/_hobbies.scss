@@ -1,0 +1,44 @@
+
+.hobbiesSection {
+    display: grid;
+    // gap: 1rem;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+
+    box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.29);
+    margin-bottom: 1rem;
+}
+
+// Hobbie Item
+.hobbieItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    // par
+    &:nth-child(even) {
+        background-color: $color-primario;
+        .hobbieName {
+            color: $color-boton;
+        }
+    }
+    // impar
+    &:nth-child(odd) {
+        background-color: $color-boton;
+        .hobbieName {
+            color: $color-primario;
+        }
+    }
+    .iconoHobbie {
+        width: 3.75rem;
+        height: 3.75rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hobbieName {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
+    }
+}
+
+
