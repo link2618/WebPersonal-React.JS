@@ -1,0 +1,49 @@
+
+.skillSection {
+    display: grid;
+    gap: 1rem;
+    // grid-auto-rows: 22rem;
+    grid-template-columns: repeat(auto-fill, minmax(23rem, 1fr));
+    background-color: $color-boton;
+    margin-top: 1rem;
+    padding: 0 1rem;
+
+    .skillCard {
+        margin-right: 1rem;
+        margin-bottom: 2rem;
+        height: auto;
+        .skills-title {
+            margin: 15px 0;
+            text-align: center;
+            h3 {
+                font-size: 1.3rem;
+                font-weight: 500;
+                color: $color-primario;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
+                // color: $color-primario;
+            }
+        }
+    }
+}
+
+// Componente de skillBar
+.skills-item-header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+.skills-item-bar {
+    background-color: $color-texto;
+    width: 100%;
+    border-radius: 1rem;
+
+    .skills-item-percent {
+        text-align: right; /* Right-align text */
+        padding-top: .4rem; /* Add top padding */
+        padding-bottom: .4rem; /* Add bottom padding */
+        background-color: $color-primario; /* White text color */
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+    }
+}
