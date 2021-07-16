@@ -1,36 +1,57 @@
-import React from 'react'
+import React, {Suspense, lazy} from 'react'
 
-import { Contact } from '../Contact/Contact'
-import { Education } from '../Education/Education'
-import { Footer } from '../Footer/Footer'
-import { Header } from '../Header/Header'
-import { Hobbies } from '../Hobbies/Hobbies'
-import { Information } from '../Information/Information'
-import { Skill } from '../Skill/Skill'
+// import { Contact } from '../Contact/Contact'
+// import { Education } from '../Education/Education'
+// import { Footer } from '../Footer/Footer'
+// import { Header } from '../Header/Header'
+// import { Hobbies } from '../Hobbies/Hobbies'
+// import { Information } from '../Information/Information'
+// import { Skill } from '../Skill/Skill'
+const Contact = lazy( () => import('../Contact/Contact') )
+const Education = lazy( () => import('../Education/Education') )
+const Footer = lazy( () => import('../Footer/Footer') )
+const Header = lazy( () => import('../Header/Header') )
+const Hobbies = lazy( () => import('../Hobbies/Hobbies') )
+const Information = lazy( () => import('../Information/Information') )
+const Skill = lazy( () => import('../Skill/Skill') )
 
 export const Home = () => {
     return (
         <>
             <section id="inicio">
-                <Header />
+                <Suspense fallback={<div>Cargando Header...</div>}>
+                    <Header />
+                </Suspense>
             </section>
             <section id="informacion" className="separacion section scrollspy">
-                <Information />
+                <Suspense fallback={<div>Cargando Information...</div>}>
+                    <Information />
+                </Suspense>
             </section>
             <section id="educacion" className="separacion scrollspy">
-                <Education />
+                <Suspense fallback={<div>Cargando Education...</div>}>
+                    <Education />
+                </Suspense>
             </section>
             <section id="habilidades" className="separacion scrollspy">
-                <Skill />
+                <Suspense fallback={<div>Cargando Skill...</div>}>
+                    <Skill />
+                </Suspense>
             </section>
             <section id="pasatiempos" className="separacion scrollspy">
-                <Hobbies />
+                <Suspense fallback={<div>Cargando Hobbies...</div>}>
+                    <Hobbies />
+                </Suspense>
+            </section>
+            <section id="contactame" className="separacion scrollspy">
+                <Suspense fallback={<div>Cargando Contact...</div>}>
+                    <Contact />
+                </Suspense>
             </section>
             <section className="separacion">
-                <Contact />
-            </section>
-            <section className="separacion">
-                <Footer />
+                <Suspense fallback={<div>Cargando Footer...</div>}>
+                    <Footer />
+                </Suspense>
             </section>
         </>
     )

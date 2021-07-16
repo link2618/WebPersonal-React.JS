@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import {  } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faLinkedinIn, faTwitter, faWhatsapp, faGithub } from '@fortawesome/free-brands-svg-icons'
 
-export const Header = () => {
+const Header = () => {
 
     const name = 'Hugo Eduardo Carvajalino Solano'
     const college = 'Ingeniero de Sistemas'
@@ -76,3 +76,5 @@ export const Header = () => {
         </>
     )
 }
+
+export default Header

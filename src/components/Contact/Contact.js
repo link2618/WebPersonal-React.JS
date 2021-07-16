@@ -10,7 +10,7 @@ const formInitial = {
     mensaje: ''
 }
 
-export const Contact = () => {
+const Contact = () => {
 
     const [valuesForm, setValuesForm] = useState(formInitial)
     const {nombre, asunto, email, mensaje} = valuesForm
@@ -68,3 +68,5 @@ export const Contact = () => {
         </>
     )
 }
+
+export default Contact;

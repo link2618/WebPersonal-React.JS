@@ -4,7 +4,7 @@ import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
 
 import { Title } from '../Title/Title'
 
-export const Education = () => {
+const Education = () => {
 
     const data = [
         {
@@ -102,3 +102,5 @@ export const Education = () => {
         </>
     )
 }
+
+export default Education

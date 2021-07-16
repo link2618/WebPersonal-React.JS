@@ -2,7 +2,7 @@ import React from 'react'
 import { Title } from '../Title/Title'
 import { SkillBar } from './SkillBar'
 
-export const Skill = () => {
+const Skill = () => {
 
     const data = [
         {
@@ -105,3 +105,5 @@ export const Skill = () => {
         </>
     )
 }
+
+export default Skill

@@ -2,7 +2,7 @@ import React from 'react'
 import { Title } from '../Title/Title'
 import { HobbieItem } from './HobbieItem'
 
-export const Hobbies = () => {
+const Hobbies = () => {
 
     const data = [
         {
@@ -53,3 +53,5 @@ export const Hobbies = () => {
         </>
     )
 }
+
+export default Hobbies
