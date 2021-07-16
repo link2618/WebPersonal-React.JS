@@ -1,13 +1,14 @@
 import React, {Suspense, lazy} from 'react'
 
-// import { Contact } from '../Contact/Contact'
-// import { Education } from '../Education/Education'
-// import { Footer } from '../Footer/Footer'
+// import Contact from '../Contact/Contact'
+// import Education from '../Education/Education'
+// import Footer from '../Footer/Footer'
 // import Header from '../Header/Header'
-// import { Hobbies } from '../Hobbies/Hobbies'
-// import { Information } from '../Information/Information'
-// import { Skill } from '../Skill/Skill'
+// import Hobbies from '../Hobbies/Hobbies'
+// import Information from '../Information/Information'
+// import Skill from '../Skill/Skill'
 // import Experience from '../Experience/Experience'
+// import Projects from '../Projects/Projects'
 const Contact = lazy( () => import('../Contact/Contact') )
 const Education = lazy( () => import('../Education/Education') )
 const Footer = lazy( () => import('../Footer/Footer') )
@@ -16,6 +17,7 @@ const Hobbies = lazy( () => import('../Hobbies/Hobbies') )
 const Information = lazy( () => import('../Information/Information') )
 const Skill = lazy( () => import('../Skill/Skill') )
 const Experience = lazy( () => import('../Experience/Experience') )
+const Projects = lazy( () => import('../Projects/Projects') )
 
 export const Home = () => {
     return (
@@ -38,6 +40,11 @@ export const Home = () => {
             <section id="habilidades" className="separacion scrollspy">
                 <Suspense fallback={<div>Cargando Skill...</div>}>
                     <Skill />
+                </Suspense>
+            </section>
+            <section id="proyectos" className="separacion scrollspy">
+                <Suspense fallback={<div>Cargando Projects...</div>}>
+                    <Projects />
                 </Suspense>
             </section>
             <section id="educacion" className="separacion scrollspy">
