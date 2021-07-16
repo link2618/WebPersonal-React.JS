@@ -3,6 +3,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import {  } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faLinkedinIn, faTwitter, faWhatsapp, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { ParticlesBackground } from './ParticlesBackground'
 
 const Header = () => {
 
@@ -37,6 +38,7 @@ const Header = () => {
     return (
         <>
         <header className="header-background section scrollspy">
+            <ParticlesBackground />
             <div className="container card-initial" id="pre">
                 <div className="row">
                     <div className="col s12">
