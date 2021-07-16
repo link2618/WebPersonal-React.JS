@@ -44,9 +44,17 @@
         select:-webkit-autofill,
         select:-webkit-autofill:hover,
         select:-webkit-autofill:focus {
-        -webkit-text-fill-color: $color-autofill;
-        -webkit-box-shadow: 0 0 0px 1000px $color-primario inset;
-        transition: background-color 5000s ease-in-out 0s;
+            -webkit-text-fill-color: $color-autofill;
+            -webkit-box-shadow: 0 0 0px 1000px $color-primario inset;
+            transition: background-color 5000s ease-in-out 0s;
+        }
+
+        .progress {
+            background-color: $color-texto;
+
+            .indeterminate {
+                background: $color-boton;
+            }
         }
 
     }
@@ -57,6 +65,21 @@
         border: 0;
         box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.29);
     }
+}
+
+.swal2-styled.swal2-confirm {
+    border: 0;
+    border-radius: .25em;
+    background: initial;
+    background-color: $color-boton !important;
+    color: #fff;
+    font-size: 1em;
+    outline: none;
+    box-shadow: none;
+}
+
+.swal2-styled.swal2-confirm:focus {
+    box-shadow: none !important;
 }
 
 @media (min-width: 62rem) {
