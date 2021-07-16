@@ -28,3 +28,28 @@ body {
 .card {
     background-color: $color-primario;
 }
+
+// Scroll
+body::-webkit-scrollbar {
+    width: .6rem;
+    height: .6rem;
+    // display: none;  /* Ocultar scroll */
+}
+  
+body::-webkit-scrollbar-thumb {
+    background: lighten($color: $color-boton, $amount: 10);
+    border-radius: 4px;
+
+    &:hover {
+        background: $color-boton;
+        box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    &:active {
+        background-color: darken($color: $color-boton, $amount: 8);
+    }
+}
+  
+.cursor {
+    cursor: pointer;
+}
