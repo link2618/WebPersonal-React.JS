@@ -55,7 +55,7 @@ const Education = () => {
 
     return (
         <>
-            <Title texto={'Educación'} icono={'flaticon/png/001-curriculum.png'} autor={'Icono realizado por Freepik de www.flaticon.com'} />
+            <Title texto={'Educación'} icono={'flaticon/png/001-curriculum.png'} autor={'Icono realizado por Freepik de www.flaticon.com'} id={'TooltipEducationTitle'} />
             <div className='timeline container'>
                 { data.map(item => [
                     <div className="timeline-event" key={item.titulo}>

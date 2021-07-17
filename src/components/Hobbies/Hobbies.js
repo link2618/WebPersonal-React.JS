@@ -39,16 +39,11 @@ const Hobbies = () => {
 
     return (
         <>
-            <Title texto={'Pasatiempos'} icono={'flaticon/png/003-veintiuna.png'} autor={'Icono realizado por Darius Dan de www.flaticon.com'} />
+            <Title texto={'Pasatiempos'} icono={'flaticon/png/003-veintiuna.png'} autor={'Icono realizado por Darius Dan de www.flaticon.com'} id={'TooltipHobbieTitle'} />
             <div className='container hobbiesSection'>
                 {data.map( item => (
-                    <HobbieItem icono={item.icono} autor={item.autor} titulo={item.titulo} key={item.titulo} />
+                    <HobbieItem icono={item.icono} autor={item.autor} titulo={item.titulo} key={item.titulo} id={item.titulo} />
                 ))}
-                {/* <HobbieItem icono={'flaticon/png/005-poker.png'} autor={'Icono realizado por Nikita Golubev de www.flaticon.com'} />
-                <HobbieItem icono={'flaticon/png/005-poker.png'} autor={'Icono realizado por Nikita Golubev de www.flaticon.com'} />
-                <HobbieItem icono={'flaticon/png/005-poker.png'} autor={'Icono realizado por Nikita Golubev de www.flaticon.com'} />
-                <HobbieItem icono={'flaticon/png/005-poker.png'} autor={'Icono realizado por Nikita Golubev de www.flaticon.com'} />
-                <HobbieItem icono={'flaticon/png/005-poker.png'} autor={'Icono realizado por Nikita Golubev de www.flaticon.com'} /> */}
             </div>
         </>
     )

@@ -45,7 +45,7 @@ const Contact = () => {
     }
     return (
         <>
-            <Title texto={'CONTÁCTAME'} icono={'flaticon/png/011-correo-electronico.png'} autor={'Icono realizado por Kiranshastry de www.flaticon.com'} />
+            <Title texto={'CONTÁCTAME'} icono={'flaticon/png/011-correo-electronico.png'} autor={'Icono realizado por Kiranshastry de www.flaticon.com'} id={'TooltipContactTitle'} />
             <div className='container contactSeccion'>
                 <form onSubmit={handleContact} className='contactForm'>
                     <div className="input-field">

@@ -29,7 +29,7 @@ const Experience = () => {
 
     return (
         <>
-            <Title texto={'Experiencia'} icono={'flaticon/png/012-experience.png'} autor={'Icono realizado por surang de www.flaticon.com'} />
+            <Title texto={'Experiencia'} icono={'flaticon/png/012-experience.png'} autor={'Icono realizado por surang de www.flaticon.com'} id={'TooltipExperienceTitle'} />
             <div className='timeline container'>
                 { data.map(item => [
                     <div className="timeline-event" key={item.titulo}>
