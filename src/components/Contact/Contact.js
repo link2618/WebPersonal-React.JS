@@ -21,7 +21,7 @@ const Contact = () => {
     const handleInputChange = ({ target }) => {
         setValuesForm({
             ...valuesForm,
-            [target.name]: target.value || target.checked
+            [target.name]: target.value
         })
     }
 
