@@ -7,7 +7,9 @@ const Projects = () => {
     return (
         <>
             <Title texto={'Projectos'} icono={'flaticon/png/013-projects.png'} autor={'Icono realizado por Freepik de www.flaticon.com'} id={'TooltipProjectTitle'} />
-            <div className="container">
+            <div className="container sectionProjects">
+                <Project />
+                <Project />
                 <Project />
             </div>
         </>
