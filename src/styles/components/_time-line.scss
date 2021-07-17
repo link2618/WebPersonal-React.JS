@@ -17,7 +17,7 @@
             width: 5px;
             height: calc(50% - 30px);
             position: absolute;
-            background: $color-texto;
+            background: $color-secundario;
             left: 22px; // mob
             top: 0;
         }
@@ -27,7 +27,7 @@
             width: 5px;
             height: calc(50% - 30px);
             position: absolute;
-            background: $color-texto;
+            background: $color-secundario;
             left: 22px; // mob
             top: calc(50% + 30px);
         }
@@ -61,7 +61,7 @@
         // blockquote {
         // }
         &:nth-child(odd) blockquote, &:nth-child(even) blockquote {
-            border-left: 6px solid $color-texto;
+            border-left: 6px solid $color-secundario;
             &::before {
                 content: "";
                 position: absolute;
@@ -71,7 +71,7 @@
                 height: 0;
                 border-width: 10px;
                 border-style: solid;
-                border-color:  transparent $color-texto transparent transparent;
+                border-color:  transparent $color-secundario transparent transparent;
             }
         }
     }
@@ -82,7 +82,7 @@
         position: absolute;
         width: 50px;
         height: 50px;
-        background: $color-texto;
+        background: $color-secundario;
         color: $color-primario;
         top: calc(50% - 25px);
         border-radius: 50%;
@@ -129,7 +129,7 @@
             }
             &:nth-child(odd) blockquote {
                 border-left-width: 0;
-                border-right: 6px solid $color-texto;
+                border-right: 6px solid $color-secundario;
                 &::before {
                     content: "";
                     position: absolute;
@@ -140,7 +140,7 @@
                     height: 0;
                     border-width: 10px;
                     border-style: solid;
-                    border-color:  transparent transparent transparent $color-texto;
+                    border-color:  transparent transparent transparent $color-secundario;
                 }
             }
         }

@@ -19,17 +19,22 @@
     // par
     &:nth-child(even) {
         background-color: $color-primario;
-        .hobbieName {
-            color: $color-boton;
-        }
+        // .hobbieName {
+        //     color: $color-boton;
+        // }
     }
     // impar
     &:nth-child(odd) {
         background-color: $color-boton;
-        .hobbieName {
-            color: $color-primario;
-        }
+        // .hobbieName {
+        //     color: $color-primario;
+        // }
     }
+    
+    .hobbieName {
+        color: $color-titulos;
+    }
+
     .iconoHobbie {
         width: 3.75rem;
         height: 3.75rem;

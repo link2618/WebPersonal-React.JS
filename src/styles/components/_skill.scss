@@ -19,7 +19,7 @@
             h3 {
                 font-size: 1.3rem;
                 font-weight: 500;
-                color: $color-primario;
+                color: $color-titulos;
                 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
                 // color: $color-primario;
             }
@@ -33,9 +33,13 @@
     justify-content: space-between;
     margin-top: 1rem;
     font-size: 1rem;
+
+    .skills-title-bar, .skills-percent {
+        color: $color-titulos;
+    }
 }
 .skills-item-bar {
-    background-color: $color-texto;
+    background-color: $color-titulos;
     width: 100%;
     border-radius: 1rem;
 
@@ -43,7 +47,7 @@
         text-align: right; /* Right-align text */
         padding-top: .4rem; /* Add top padding */
         padding-bottom: .4rem; /* Add bottom padding */
-        background-color: $color-primario; /* White text color */
+        background-color: $color-secundario; /* White text color */
         border-top-left-radius: 1rem;
         border-bottom-left-radius: 1rem;
     }
