@@ -3,7 +3,7 @@ import Iframe from 'react-iframe'
 import Swal from 'sweetalert2'
 import * as emailjs from 'emailjs-com'
 
-import { Title } from '../Title/Title'
+import { Title } from '../shared/Title/Title'
 
 const formInitial = {
     nombre: '',
