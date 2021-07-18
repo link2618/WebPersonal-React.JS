@@ -17,7 +17,7 @@ const Information = () => {
                         <div className="card-action">
                             <div className="botonconf">
                                 <a download href="pdf/Hoja de vida - Ingeniero Hugo Carvajalino.pdf" className="btn waves-effect">Descargar HV</a>
-                                {/* <a href="#contactame" className="btn waves-effect">Contactame</a> */}
+                                <a href="#contactame" className="btn waves-effect">Contactame</a>
                             </div>
                         </div>
                     </div>
