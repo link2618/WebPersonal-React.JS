@@ -77,7 +77,7 @@ const Skill = () => {
                     porcentaje: '70%'
                 },
                 {
-                    lenguaje: 'sequelize',
+                    lenguaje: 'Sequelize',
                     porcentaje: '60%'
                 },
             ]
