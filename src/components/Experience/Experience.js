@@ -7,12 +7,22 @@ const Experience = () => {
 
     const data = [
         {
+            titulo: 'Erco Energía',
+            texto: 'E',
+            info: [{
+                escuela: 'Desarrollor FullStack Junior.',
+                ubicacion: 'Remoto',
+                fecha: 'Septiembre/2021 - Actualidad',
+                extra: ['React JS', 'Express.js', 'MongoDB', 'Postgresql']
+            }]
+        },
+        {
             titulo: 'World Pos Solutions, WPOSS',
             texto: 'W',
             info: [{
                 escuela: 'Ingeniero De Desarrollo Junior.',
                 ubicacion: 'Remoto',
-                fecha: 'Septiembre/2020 - Actualidad',
+                fecha: 'Septiembre/2020 - Agosto/2021',
                 extra: ['Angular', 'Express.js', 'Cassandra']
             }]
         },
@@ -23,7 +33,7 @@ const Experience = () => {
                 escuela: 'Desarrollador Full Stack.',
                 ubicacion: 'Remoto',
                 fecha: 'Marzo/2020 - Actualidad',
-                extra: ['React.js', 'React Native', 'Express.js', 'MongoDB']
+                extra: ['React JS', 'React Native', 'Express.js', 'MongoDB']
             }]
         },
     ]
