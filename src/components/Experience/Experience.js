@@ -1,6 +1,6 @@
 import React from 'react'
-import { Timeline } from '../shared/TimeLine/Timeline'
 
+import { Timeline } from '../shared/TimeLine/Timeline'
 import { Title } from '../shared/Title/Title'
 
 const Experience = () => {

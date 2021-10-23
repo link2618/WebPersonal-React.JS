@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react'
-import { gsap } from 'gsap'
+import { gsap, Power2 } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import { Title } from '../shared/Title/Title'
@@ -23,13 +23,13 @@ const Projects = () => {
             {
                 duration: 1,
                 autoAlpha: 1, 
-                easy: 'none', 
+                ease: Power2.in, 
                 scrollTrigger: {
-                    id: `section-${index+1}`, 
+                    id: `project-${index+1}`, 
                     trigger: element, 
                     start: 'top center+=100', 
                     toggleActions: 'play none none reverse', 
-                    markers: true
+                    // markers: true
                 }
             })
         });
@@ -52,7 +52,7 @@ const Projects = () => {
         if (e && !projectRefs.current.includes(e.target)) {
             projectRefs.current.push(e)
         }
-        console.log('-->', projectRefs.current)
+        // console.log('-->', projectRefs.current)
     }
 
     return (

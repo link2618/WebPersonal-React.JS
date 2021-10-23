@@ -1,8 +1,42 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import { gsap, Power2 } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
 import { Title } from '../shared/Title/Title'
 import { HobbieItem } from './HobbieItem'
 
+gsap.registerPlugin(ScrollTrigger)
+
 const Hobbies = () => {
+
+    const skillBarRefs = useRef([])
+    skillBarRefs.current = []
+
+    useEffect(() => {
+        skillBarRefs.current.forEach((element, index) => {
+            gsap.fromTo(element, {
+                autoAlpha: 0
+            }, 
+            {
+                duration: 1,
+                autoAlpha: 1,
+                ease: Power2.in, 
+                scrollTrigger: {
+                    id: `hobbie-${index+1}`, 
+                    trigger: element, 
+                    start: 'top center+=100', 
+                    toggleActions: 'play none none reverse', 
+                    // markers: true
+                }
+            })
+        });
+    }, [])
+
+    const addToRefs = (e) => {
+        if (e && !skillBarRefs.current.includes(e.target)) {
+            skillBarRefs.current.push(e)
+        }
+    }
 
     const data = [
         {
@@ -40,7 +74,7 @@ const Hobbies = () => {
     return (
         <>
             <Title texto={'Pasatiempos'} icono={'flaticon/png/003-veintiuna.png'} autor={'Icono realizado por Darius Dan de www.flaticon.com'} id={'TooltipHobbieTitle'} />
-            <div className='container hobbiesSection'>
+            <div className='container hobbiesSection' ref={addToRefs}>
                 {data.map( item => (
                     <HobbieItem icono={item.icono} autor={item.autor} titulo={item.titulo} key={item.titulo} id={item.titulo} />
                 ))}

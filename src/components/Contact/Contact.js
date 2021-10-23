@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import Iframe from 'react-iframe'
 import Swal from 'sweetalert2'
 import * as emailjs from 'emailjs-com'
+import { gsap, Power2 } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import { Title } from '../shared/Title/Title'
 
@@ -12,11 +14,42 @@ const formInitial = {
     mensaje: ''
 }
 
+gsap.registerPlugin(ScrollTrigger)
+
 const Contact = () => {
 
     const [valuesForm, setValuesForm] = useState(formInitial)
     const [loading, setLoading] = useState(false)
     const {nombre, asunto, email, mensaje} = valuesForm
+
+    const contactRefs = useRef([])
+    contactRefs.current = []
+
+    useEffect(() => {
+        contactRefs.current.forEach((element, index) => {
+            gsap.fromTo(element, {
+                autoAlpha: 0
+            }, 
+            {
+                duration: 1,
+                autoAlpha: 1, 
+                ease: Power2.in, 
+                scrollTrigger: {
+                    id: `contact-${index+1}`, 
+                    trigger: element, 
+                    start: 'top center+=100', 
+                    toggleActions: 'play none none reverse', 
+                    // markers: true
+                }
+            })
+        });
+    }, [])
+
+    const addToRefs = (e) => {
+        if (e && !contactRefs.current.includes(e.target)) {
+            contactRefs.current.push(e)
+        }
+    }
 
     const handleInputChange = ({ target }) => {
         setValuesForm({
@@ -46,7 +79,7 @@ const Contact = () => {
     return (
         <>
             <Title texto={'CONTÁCTAME'} icono={'flaticon/png/011-correo-electronico.png'} autor={'Icono realizado por Kiranshastry de www.flaticon.com'} id={'TooltipContactTitle'} />
-            <div className='container contactSeccion'>
+            <div className='container contactSeccion' ref={addToRefs}>
                 <form onSubmit={handleContact} className='contactForm'>
                     <div className="input-field">
                         <i className="material-icons prefix">person</i>

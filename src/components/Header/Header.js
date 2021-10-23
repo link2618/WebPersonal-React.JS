@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import { gsap, Power2 } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import {  } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faLinkedinIn, faTwitter, faWhatsapp, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { ParticlesBackground } from './ParticlesBackground'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const Header = () => {
 
@@ -35,9 +39,38 @@ const Header = () => {
     const whatsapp = 'https://api.whatsapp.com/send?phone=573165430354&text=Hola,%20me%20gustar%C3%ADa%20hacer%20una%20consulta.'
     const github = 'https://github.com/link2618?tab=repositories'
 
+    const skillBarRefs = useRef([])
+    skillBarRefs.current = []
+
+    useEffect(() => {
+        skillBarRefs.current.forEach((element, index) => {
+            gsap.fromTo(element, {
+                autoAlpha: 0
+            }, 
+            {
+                duration: 1,
+                autoAlpha: 1,
+                ease: Power2.in, 
+                scrollTrigger: {
+                    id: `header-${index+1}`, 
+                    trigger: element, 
+                    start: 'top center+=100', 
+                    toggleActions: 'play none none reverse', 
+                    // markers: true
+                }
+            })
+        });
+    }, [])
+
+    const addToRefs = (e) => {
+        if (e && !skillBarRefs.current.includes(e.target)) {
+            skillBarRefs.current.push(e)
+        }
+    }
+
     return (
         <>
-        <header className="header-background section scrollspy">
+        <header className="header-background section scrollspy" ref={addToRefs}>
             <ParticlesBackground />
             <div className="container card-initial" id="pre">
                 <div className="row">
