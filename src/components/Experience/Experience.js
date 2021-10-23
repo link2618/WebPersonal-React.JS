@@ -10,7 +10,7 @@ const Experience = () => {
             titulo: 'Erco Energía',
             texto: 'E',
             info: [{
-                escuela: 'Desarrollor FullStack Junior.',
+                escuela: 'Desarrollor FullStack.',
                 ubicacion: 'Remoto',
                 fecha: 'Septiembre/2021 - Actualidad',
                 extra: ['React JS', 'Express.js', 'MongoDB', 'Postgresql']
