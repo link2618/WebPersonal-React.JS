@@ -9,6 +9,8 @@ import React, {Suspense, lazy} from 'react'
 // import Skill from '../Skill/Skill'
 // import Experience from '../Experience/Experience'
 // import Projects from '../Projects/Projects'
+
+// Para carga perezosa
 const Contact = lazy( () => import('../Contact/Contact') )
 const Education = lazy( () => import('../Education/Education') )
 const Footer = lazy( () => import('../Footer/Footer') )
